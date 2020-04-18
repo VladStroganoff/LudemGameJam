@@ -1,33 +1,79 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml;
 
 namespace ProjectName.MiniGames.Bar
 {
+    /// <summary>
+    /// Bar Minigame main script. Manages new orders at the bar, and effect on PartyStatistics based on perfomance of the player.
+    /// </summary>
     public class BarOrderQueue : MonoBehaviour
     {
         private BarCookbook m_cookbook = new BarCookbook();
-        private String m_currentOrder;
+        private DrinkRecipe m_currentOrder;
 
-        private float m_timer = 1;
+        private List<DrinkRecipe.Ingredient> m_drinkMixer = new List<DrinkRecipe.Ingredient>();
+
+        private bool m_orderComplete = false;
 
         private void Update()
         {
-            m_timer -= Time.deltaTime;
-
-            if (m_timer < 0)
+            if (m_orderComplete)
             {
-                m_currentOrder = NewOrder();
+                NewOrder();
                 Debug.Log(m_currentOrder);
-
-                m_timer = 1;
             }
         }
 
-        public String NewOrder()
+        /// <summary>
+        /// Creates a new order
+        /// </summary>
+        /// -- This is a customer initiated action --
+        public void NewOrder()
         {
-            return m_cookbook.GetRandomRecipe();
+            m_drinkMixer.Clear();
+            m_currentOrder = m_cookbook.GetRandomRecipe();
+            m_orderComplete = false;
         }
 
+        /// <summary>
+        /// Adds ingredient to the mixer
+        /// </summary>
+        /// <param name="ingredient">Ingredient Added</param>
+        ///  -- This is a player initiated action -- 
+        public void AddToMixer(DrinkRecipe.Ingredient ingredient)
+        {
+            m_drinkMixer.Add(ingredient);
+        }
+
+        /// <summary>
+        /// Checks the current drink mixer against the current order. 
+        /// Out of 100 points, either all will go to party life, or some to party life and some to violence.
+        /// Remainder of points awarded out of the full 100 goes to violence: life/violence; 100/0, 75/25, 25/75, 
+        /// </summary>
+        ///  -- This is a player initiated action -- 
+        public void CheckOrder()
+        {
+            if (m_drinkMixer.SequenceEqual(m_currentOrder.Ingredients))
+            {
+                // full points
+                Debug.Log("fullpoints");
+            }
+            else if (m_drinkMixer.All(m_currentOrder.Ingredients.Contains) && m_drinkMixer.Count == m_currentOrder.Ingredients.Count)
+            {
+                // 75% of points
+                Debug.Log("75%");
+            }
+            else
+            {
+                // 25% of points 
+                Debug.Log("25%");
+            }
+
+            m_orderComplete = true;
+        }
     }
 }

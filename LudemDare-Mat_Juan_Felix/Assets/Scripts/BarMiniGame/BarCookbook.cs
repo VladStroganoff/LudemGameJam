@@ -14,18 +14,18 @@ namespace ProjectName.MiniGames.Bar
     {
         private List<DrinkRecipe> m_barRecipes = new List<DrinkRecipe>()
         {
-            new DrinkRecipe("TestOne", Ingredient.Blue, Ingredient.Pink),
-            new DrinkRecipe("TestTwo", Ingredient.Green, Ingredient.Blue),
-            new DrinkRecipe("TestThree", Ingredient.Blue, Ingredient.Pink, Ingredient.Blue),
-            new DrinkRecipe("TestFour", Ingredient.Blue, Ingredient.Pink, Ingredient.Red, Ingredient.Green),
-            new DrinkRecipe("TestFive", Ingredient.Red, Ingredient.Green, Ingredient.Pink)
+            new DrinkRecipe("Blue Jazz", Ingredient.Blue, Ingredient.Pink),
+            new DrinkRecipe("Tango", Ingredient.Green, Ingredient.Blue),
+            new DrinkRecipe("Flag Ship", Ingredient.Blue, Ingredient.Pink, Ingredient.Blue),
+            new DrinkRecipe("Convo Starter", Ingredient.Blue, Ingredient.Pink, Ingredient.Red, Ingredient.Green),
+            new DrinkRecipe("Trifector", Ingredient.Red, Ingredient.Green, Ingredient.Pink)
         };
 
         /// <summary>
         /// AS GetRecipe() but with a randomized recipe from "m_barRecipes"
         /// </summary>
         /// <returns></returns>
-        public string GetRandomRecipe()
+        public DrinkRecipe GetRandomRecipe()
         {
             return GetRecipe(Random.Range(0, m_barRecipes.Count - 1));
         }
@@ -35,18 +35,9 @@ namespace ProjectName.MiniGames.Bar
         /// </summary>
         /// <param name="index">Index position of the recipe in the "m_barRecipes" list</param>
         /// <returns></returns>
-        public string GetRecipe(int index)
+        public DrinkRecipe GetRecipe(int index)
         {
-            StringBuilder builder = new StringBuilder();
-
-            builder.Append(m_barRecipes[index].Name);
-
-            foreach (Ingredient ingredient in m_barRecipes[index].Ingredients)
-            {
-                builder.Append(", " + ingredient.ToString());
-            }
-
-            return builder.ToString();
+            return m_barRecipes[index];
         }
     }
 }

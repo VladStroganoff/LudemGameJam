@@ -16,7 +16,8 @@ namespace ProjectName.MiniGames.Bar
             Pink,
             Red,
             Blue,
-            Green
+            Green,
+            Null
         }
         
         /// <summary>
