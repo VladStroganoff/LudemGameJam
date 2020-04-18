@@ -4,13 +4,11 @@ using System.Collections;
 namespace ProjectName.Core
 {
     /// <summary>
-    /// This class connects our PartyStatistics to our user interface.
+    /// This script links players to player controllers
     /// </summary>
-    public class CoreUI : MonoBehaviour
+    public class PlayerManager : MonoBehaviour
     {
-
-
-
+       
         // Use this for initialization
         void Start()
         {

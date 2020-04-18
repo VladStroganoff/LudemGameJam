@@ -1,39 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
-using ProjectName.MiniGames.Bar;
 using System;
-using static ProjectName.MiniGames.Bar.DrinkRecipe;
-using System.Text;
-using System.Runtime.CompilerServices;
 
-public class BarOrderQueue : MonoBehaviour
+namespace ProjectName.MiniGames.Bar
 {
-    private BarCookbook m_cookbook = new BarCookbook();
-    private String m_currentOrder;
-
-    private float m_timer = 1;
-
-    private void Start()
+    public class BarOrderQueue : MonoBehaviour
     {
-        
-    }
+        private BarCookbook m_cookbook = new BarCookbook();
+        private String m_currentOrder;
 
-    private void Update()
-    {
-        m_timer -= Time.deltaTime;
+        private float m_timer = 1;
 
-        if (m_timer < 0)
+        private void Update()
         {
-            m_currentOrder = NewOrder();
-            Debug.Log(m_currentOrder);
+            m_timer -= Time.deltaTime;
 
-            m_timer = 1;
+            if (m_timer < 0)
+            {
+                m_currentOrder = NewOrder();
+                Debug.Log(m_currentOrder);
+
+                m_timer = 1;
+            }
         }
-    } 
 
-    public String NewOrder()
-    {
-        return m_cookbook.GetRecipe();
+        public String NewOrder()
+        {
+            return m_cookbook.GetRandomRecipe();
+        }
+
     }
-
 }

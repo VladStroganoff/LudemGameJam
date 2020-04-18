@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{A55F7B48-A2FB-2936-8298-D35AD470D7E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -67,6 +68,7 @@
     <Compile Include="Assets\Scripts\BarMiniGame\BarOrderQueue.cs" />
     <Compile Include="Assets\Scripts\BarMiniGame\DrinkRecipe.cs" />
     <Compile Include="Assets\Scripts\CoreUI.cs" />
+    <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\PartyStatistics.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/git/LudemDare/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
