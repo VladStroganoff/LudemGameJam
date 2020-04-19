@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
+using UnityEngine.UI;
 
 namespace ProjectName.MiniGames.Bar
 {
@@ -18,13 +19,15 @@ namespace ProjectName.MiniGames.Bar
         private List<DrinkRecipe.Ingredient> m_drinkMixer = new List<DrinkRecipe.Ingredient>();
 
         private bool m_orderComplete = false;
+        public Text BarTab;
+
 
         private void Update()
         {
             if (m_orderComplete)
             {
+                BarTab.text = "You made the drink "  + m_currentOrder.ToString();
                 NewOrder();
-                Debug.Log(m_currentOrder);
             }
         }
 
@@ -37,6 +40,7 @@ namespace ProjectName.MiniGames.Bar
             m_drinkMixer.Clear();
             m_currentOrder = m_cookbook.GetRandomRecipe();
             m_orderComplete = false;
+            BarTab.text = m_currentOrder.ToString();
         }
 
         /// <summary>

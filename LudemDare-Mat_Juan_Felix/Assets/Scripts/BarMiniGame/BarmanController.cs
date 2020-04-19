@@ -20,14 +20,12 @@ namespace ProjectName.MiniGames.Bar
         private BarOrderQueue m_bar;
         public Animator BarmanAnimator;
 
-
         private DrinkRecipe.Ingredient m_heldIngredient;
 
         void Update()
         {
             if(Input.GetButton("Horizontal"))
             {
-                Debug.Log("Horizontal " + Input.GetAxis("Horizontal"));
                 transform.position += new Vector3(Input.GetAxis("Horizontal") * m_speed * Time.deltaTime, 0, 0);
                 if (BarmanAnimator.GetBool("IsRunning") == false)
                 {
@@ -36,7 +34,6 @@ namespace ProjectName.MiniGames.Bar
             }
             if (Input.GetButton("Vertical"))
             {
-                Debug.Log("Vertical " + Input.GetAxis("Horizontal"));
                 transform.position += new Vector3(0, 0, Input.GetAxis("Vertical") * m_speed * Time.deltaTime);
 
                 if (BarmanAnimator.GetBool("IsRunning") == false)
