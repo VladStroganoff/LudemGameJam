@@ -21,17 +21,6 @@ namespace ProjectName.MiniGames.Bar
 
         private bool m_orderComplete = false;
 
-
-        private void Update()
-        {
-            if (m_orderComplete)
-            {
-                FeedBackLog.FeedBack.Log("You made the drink " + m_currentOrder.Name);
-
-                NewOrder();
-            }
-        }
-
         /// <summary>
         /// Creates a new order
         /// </summary>
@@ -41,9 +30,10 @@ namespace ProjectName.MiniGames.Bar
             m_drinkMixer.Clear();
             m_currentOrder = m_cookbook.GetRandomRecipe();
             m_orderComplete = false;
+            FeedBackLog.FeedBack.Wipe();
             FeedBackLog.FeedBack.Log("New Order for a: " + m_currentOrder.Name);
 
-            foreach(DrinkRecipe.Ingredient liquid in m_currentOrder.Ingredients)
+            foreach (DrinkRecipe.Ingredient liquid in m_currentOrder.Ingredients)
             {
                 FeedBackLog.FeedBack.Log(liquid.ToString());
             }
@@ -56,14 +46,10 @@ namespace ProjectName.MiniGames.Bar
         ///  -- This is a player initiated action -- 
         public void AddToMixer(DrinkRecipe.Ingredient ingredient)
         {
-            FeedBackLog.FeedBack.Log("Current ingredients are: ");
-         
+
             m_drinkMixer.Add(ingredient);
 
-            foreach (DrinkRecipe.Ingredient liquid in m_drinkMixer)
-            {
-                FeedBackLog.FeedBack.Log(liquid.ToString());
-            }
+            FeedBackLog.FeedBack.LogIngredient(ingredient.ToString());
         }
 
         /// <summary>
@@ -74,10 +60,15 @@ namespace ProjectName.MiniGames.Bar
         ///  -- This is a player initiated action -- 
         public void CheckOrder()
         {
+            if (m_currentOrder == null)
+                return;
+
+
             if (m_drinkMixer.SequenceEqual(m_currentOrder.Ingredients))
             {
                 // full points
-                FeedBackLog.FeedBack.Log("fullpoints");
+                FeedBackLog.FeedBack.Log("Full Points!!!");
+
             }
             else if (m_drinkMixer.All(m_currentOrder.Ingredients.Contains) && m_drinkMixer.Count == m_currentOrder.Ingredients.Count)
             {
@@ -90,6 +81,7 @@ namespace ProjectName.MiniGames.Bar
                 FeedBackLog.FeedBack.Log("25%");
             }
 
+            FeedBackLog.FeedBack.Log("You made the drink " + m_currentOrder.Name);
             m_orderComplete = true;
         }
     }
