@@ -18,20 +18,38 @@ namespace ProjectName.MiniGames.Bar
         [Header("Assigned Values")]
         [SerializeField]
         private BarOrderQueue m_bar;
+        public Animator BarmanAnimator;
+
 
         private DrinkRecipe.Ingredient m_heldIngredient;
 
         void Update()
         {
-            if(Mathf.Abs(Input.GetAxis("Horizontal")) > m_silenceRange)
+            if(Input.GetButton("Horizontal"))
             {
                 Debug.Log("Horizontal " + Input.GetAxis("Horizontal"));
                 transform.position += new Vector3(Input.GetAxis("Horizontal") * m_speed * Time.deltaTime, 0, 0);
+                if (BarmanAnimator.GetBool("IsRunning") == false)
+                {
+                    BarmanAnimator.SetBool("IsRunning", true);
+                }
             }
-            if (Mathf.Abs(Input.GetAxis("Vertical")) > m_silenceRange)
+            if (Input.GetButton("Vertical"))
             {
                 Debug.Log("Vertical " + Input.GetAxis("Horizontal"));
                 transform.position += new Vector3(0, 0, Input.GetAxis("Vertical") * m_speed * Time.deltaTime);
+
+                if (BarmanAnimator.GetBool("IsRunning") == false)
+                {
+                    BarmanAnimator.SetBool("IsRunning", true);
+                }
+            }
+
+
+            if (Input.GetButtonUp("Vertical"))
+            {
+                BarmanAnimator.SetBool("IsRunning", false);
+
             }
         }
 
