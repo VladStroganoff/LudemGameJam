@@ -265,7 +265,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 202e9ce8d03692841a999121d04cb457, type: 2}
+  - {fileID: 2100000, guid: c16928aa3b5335c47939fe8907ffea0b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -358,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d0629ca8fbc614d488cc35e12cebf53a, type: 2}
+  - {fileID: 2100000, guid: 3d8b3c4ae22ff7540824924db9ed7b48, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -451,7 +451,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 394743750d6674547bac49fd162766f6, type: 2}
+  - {fileID: 2100000, guid: fd0d69001ab990c44b0cc6b24fb11ccc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -812,7 +812,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8a5e03656121eef4a8aa78bdb625313a, type: 2}
+  - {fileID: 2100000, guid: cecb5a76befc3354db1bf20e94d3bd2a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -884,11 +884,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662789934}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83635c891fee4b7468ea2cd64bd1e111, type: 3}
+  m_Script: {fileID: 11500000, guid: f7c8cf6a49662ac4daa7d4b2da3e485f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_silenceRange: 0.2
-  m_speed: 1
+  m_silenceRange: 0
+  m_speed: 0
   m_bar: {fileID: 1940010333}
 --- !u!65 &1662789936
 BoxCollider:
@@ -921,7 +921,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 202e9ce8d03692841a999121d04cb457, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -990,7 +990,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1940010332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c44bb244e3b2504fb96c0fe3ecf2321, type: 3}
+  m_Script: {fileID: 11500000, guid: d014bda823859af41aa2dc5b88aec78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1940010334
