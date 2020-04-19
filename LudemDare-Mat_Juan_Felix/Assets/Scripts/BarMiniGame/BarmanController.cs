@@ -85,7 +85,6 @@ namespace ProjectName.MiniGames.Bar
             if (other.tag == "CheckOrder")
             {
                 m_bar.CheckOrder();
-                FeedBackLog.FeedBack.Log("Checking Order");
                 return;
             }
 

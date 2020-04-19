@@ -8,11 +8,11 @@ public class FeedBackLog : MonoBehaviour
 
     public static FeedBackLog FeedBack;
     public Text LogText;
-    string log;
+    string log = "";
 
      public void Log(string message)
     {
-        log = message + Environment.NewLine + message;
+        log = log + Environment.NewLine + message;
         LogText.text = log;
     }
 
