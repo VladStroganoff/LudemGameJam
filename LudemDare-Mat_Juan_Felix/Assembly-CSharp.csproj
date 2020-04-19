@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\BarMiniGame\BarmanController.cs" />
     <Compile Include="Assets\Scripts\BarMiniGame\DrinkRecipe.cs" />
     <Compile Include="Assets\Scripts\CoreUI.cs" />
+    <Compile Include="Assets\Scripts\FeedBackLog.cs" />
     <Compile Include="Assets\Scripts\PartyStatistics.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Reference Include="Unity.Timeline.Editor">

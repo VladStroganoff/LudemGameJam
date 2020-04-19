@@ -26,7 +26,7 @@ namespace ProjectName.MiniGames.Bar
         {
             if (m_orderComplete)
             {
-                BarTab.text = "You made the drink "  + m_currentOrder.ToString();
+                FeedBackLog.FeedBack.Log("You made the drink " + m_currentOrder.ToString());
                 NewOrder();
             }
         }

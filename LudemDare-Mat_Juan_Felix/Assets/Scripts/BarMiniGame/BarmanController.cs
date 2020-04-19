@@ -76,14 +76,21 @@ namespace ProjectName.MiniGames.Bar
 
             if (other.tag == "DrinkMixer" && m_heldIngredient != DrinkRecipe.Ingredient.Null)
             {
+                FeedBackLog.FeedBack.Log("Adding: " + m_heldIngredient);
                 m_bar.AddToMixer(m_heldIngredient);
                 m_heldIngredient = DrinkRecipe.Ingredient.Null;
+                return;
             }
 
             if (other.tag == "CheckOrder")
             {
                 m_bar.CheckOrder();
+                FeedBackLog.FeedBack.Log("Checking Order");
+                return;
             }
+
+            FeedBackLog.FeedBack.Log("Holding: " + m_heldIngredient);
+
         }
 
 
