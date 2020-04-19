@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+LudemDare-Mat_Juan_Felix/[Ll]ibrary/
+LudemDare-Mat_Juan_Felix/[Tt]emp/
+LudemDare-Mat_Juan_Felix/[Oo]bj/
+LudemDare-Mat_Juan_Felix/[Bb]uild/
+LudemDare-Mat_Juan_Felix/[Bb]uilds/
+LudemDare-Mat_Juan_Felix/[Ll]ogs/
+LudemDare-Mat_Juan_Felix/[Uu]ser[Ss]ettings/
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/

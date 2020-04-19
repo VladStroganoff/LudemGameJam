@@ -21,13 +21,6 @@ namespace ProjectName.MiniGames.Bar
 
         private DrinkRecipe.Ingredient m_heldIngredient;
 
-        // Use this for initialization
-        void Start()
-        {
-            
-        }
-
-        // Update is called once per frame
         void Update()
         {
             if(Mathf.Abs(Input.GetAxis("Horizontal")) > m_silenceRange)

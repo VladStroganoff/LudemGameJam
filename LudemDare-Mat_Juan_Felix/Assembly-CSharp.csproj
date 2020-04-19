@@ -70,31 +70,31 @@
     <Compile Include="Assets\Scripts\PartyStatistics.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/00 - Development/Git/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/NormalDrive/Projects/LudemGameJam/LudemDare-Mat_Juan_Felix/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
