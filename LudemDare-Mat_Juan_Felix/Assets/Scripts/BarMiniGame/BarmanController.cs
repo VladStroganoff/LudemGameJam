@@ -19,6 +19,8 @@ namespace ProjectName.MiniGames.Bar
         [SerializeField]
         private BarOrderQueue m_bar;
         public Animator BarmanAnimator;
+        public ItemView HeldItem;
+
 
         private DrinkRecipe.Ingredient m_heldIngredient;
 
@@ -59,26 +61,30 @@ namespace ProjectName.MiniGames.Bar
         {
             if(other.tag == "Blue")
             {
+                HeldItem.SetItem(DrinkRecipe.Ingredient.Blue);
                 m_heldIngredient = DrinkRecipe.Ingredient.Blue;
             }
             if (other.tag == "Pink")
             {
+                HeldItem.SetItem(DrinkRecipe.Ingredient.Pink);
                 m_heldIngredient = DrinkRecipe.Ingredient.Pink;
             }
             if (other.tag == "Red")
             {
+                HeldItem.SetItem(DrinkRecipe.Ingredient.Red);
                 m_heldIngredient = DrinkRecipe.Ingredient.Red;
             }
             if (other.tag == "Green")
             {
+                HeldItem.SetItem(DrinkRecipe.Ingredient.Green);
                 m_heldIngredient = DrinkRecipe.Ingredient.Green;
             }
 
             if (other.tag == "DrinkMixer" && m_heldIngredient != DrinkRecipe.Ingredient.Null)
             {
-                FeedBackLog.FeedBack.Log("Adding: " + m_heldIngredient);
                 m_bar.AddToMixer(m_heldIngredient);
                 m_heldIngredient = DrinkRecipe.Ingredient.Null;
+                HeldItem.RemoveFromHand();
                 return;
             }
 
@@ -88,7 +94,7 @@ namespace ProjectName.MiniGames.Bar
                 return;
             }
 
-            FeedBackLog.FeedBack.Log("Holding: " + m_heldIngredient);
+            //FeedBackLog.FeedBack.Log("Holding: " + m_heldIngredient);
 
         }
 

@@ -13,6 +13,7 @@ namespace ProjectName.MiniGames.Bar
     /// </summary>
     public class BarOrderQueue : MonoBehaviour
     {
+
         private BarCookbook m_cookbook = new BarCookbook();
         private DrinkRecipe m_currentOrder;
 
@@ -25,7 +26,7 @@ namespace ProjectName.MiniGames.Bar
         {
             if (m_orderComplete)
             {
-                FeedBackLog.FeedBack.Log("You made the drink " + m_currentOrder.Ingredients);
+                FeedBackLog.FeedBack.Log("You made the drink " + m_currentOrder.Name);
 
                 NewOrder();
             }
@@ -40,7 +41,7 @@ namespace ProjectName.MiniGames.Bar
             m_drinkMixer.Clear();
             m_currentOrder = m_cookbook.GetRandomRecipe();
             m_orderComplete = false;
-            FeedBackLog.FeedBack.Log("New Order for: ");
+            FeedBackLog.FeedBack.Log("New Order for a: " + m_currentOrder.Name);
 
             foreach(DrinkRecipe.Ingredient liquid in m_currentOrder.Ingredients)
             {
