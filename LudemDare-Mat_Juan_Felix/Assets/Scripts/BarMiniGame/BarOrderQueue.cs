@@ -6,6 +6,8 @@ using System.Linq;
 using System.Xml;
 using UnityEngine.UI;
 
+using LittleFort.Managers;
+
 namespace ProjectName.MiniGames.Bar
 {
     /// <summary>
@@ -20,6 +22,14 @@ namespace ProjectName.MiniGames.Bar
         private List<DrinkRecipe.Ingredient> m_drinkMixer = new List<DrinkRecipe.Ingredient>();
 
         private bool m_orderComplete = false;
+
+        [SerializeField] private GameManager m_gameManager;
+
+        private void Start()
+        {
+            NewOrder();
+        }
+
 
         /// <summary>
         /// Creates a new order
@@ -67,22 +77,29 @@ namespace ProjectName.MiniGames.Bar
             if (m_drinkMixer.SequenceEqual(m_currentOrder.Ingredients))
             {
                 // full points
-                FeedBackLog.FeedBack.Log("Full Points!!!");
+                m_gameManager.Score += 100;
+                FeedBackLog.FeedBack.Log("Correct!!! Full Points!!!");
 
             }
             else if (m_drinkMixer.All(m_currentOrder.Ingredients.Contains) && m_drinkMixer.Count == m_currentOrder.Ingredients.Count)
             {
                 // 75% of points
-                FeedBackLog.FeedBack.Log("75%");
+                m_gameManager.Score += 75;
+                FeedBackLog.FeedBack.Log("Good Enough! 75%");
             }
             else
             {
                 // 25% of points 
-                FeedBackLog.FeedBack.Log("25%");
+                m_gameManager.Score += 25;
+                FeedBackLog.FeedBack.Log("Eww... 25%");
             }
 
             FeedBackLog.FeedBack.Log("You made the drink " + m_currentOrder.Name);
             m_orderComplete = true;
+
+            // NewOrder();
+
+            Invoke("NewOrder", 3);
         }
     }
 }
